@@ -40825,8 +40825,12 @@ __vue_render__$4._withStripped = true;
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_moment__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_moment_locale_es__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_moment_locale_es___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_moment_locale_es__);
 // mixins for moment js ... recomanded to not include when you don't need it
 
+
+__WEBPACK_IMPORTED_MODULE_0_moment___default.a.locale('es');
 /* harmony default export */ __webpack_exports__["a"] = ({
    created: function created() {
 
@@ -40839,7 +40843,8 @@ __vue_render__$4._withStripped = true;
 
    filters: {
       moment: function moment(date, format) {
-         return __WEBPACK_IMPORTED_MODULE_0_moment___default()(date).format(format);
+
+         return __WEBPACK_IMPORTED_MODULE_0_moment___default()(date).format(format || 'LL');
       }
 
    }
