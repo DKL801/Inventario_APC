@@ -237,7 +237,7 @@
                     </td>
 
                     <td>
-                      <input class="form-control" type="text" name v-model="invoice.product[index].price"
+                      <input class="form-control" type="number" name v-model="invoice.product[index].price"
                         placeholder="Precio" value>
 
                       <span v-if="errors['product.' + index + '.price']" class="requiredField">{{
@@ -245,7 +245,7 @@
                     </td>
 
                     <td>
-                      <input class="form-control" type="text" name v-model.double="invoice.product[index].discount"
+                      <input class="form-control" type="number" name v-model.double="invoice.product[index].discount"
                         placeholder="Descuento">
 
                       <span v-if="errors['product.' + index + '.discount']" class="requiredField">{{
@@ -254,7 +254,7 @@
 
                     <td>
                       <select class="form-control" v-model="invoice.product[index].discount_type">
-                        <option value="1">Importe</option>
+                        <option value="1">Rebaja</option>
                       </select>
                     </td>
 
@@ -313,7 +313,7 @@
                 <div class="input-group focused">
                   <div class="input-group-addon">S/.</div>
 
-                  <input type="text" class="form-control" v-model="invoice.paid_amount" placeholder="Pagar ahora"
+                  <input type="number" class="form-control" v-model="invoice.paid_amount" placeholder="Pagar ahora"
                     style="border-bottom: 1px solid #ccc;">
                 </div>
               </div>
@@ -334,7 +334,7 @@
                 <div class="input-group focused">
                   <div class="input-group-addon"></div>
 
-                  <textarea rows="1" class="form-control no-resize auto-growth" placeholder="Bank Information"
+                  <textarea rows="1" class="form-control no-resize auto-growth" placeholder="Informacion del Banco "
                     v-model="invoice.bank_info" style="border-bottom: 1px solid #ccc;"></textarea>
                 </div>
               </div>
@@ -378,6 +378,7 @@ export default {
 
   data() {
     return {
+      //estado de productos
       invoice: {
         invoice_no: "",
         customer_type: "",
@@ -591,11 +592,11 @@ export default {
 
     discount(type, discount, main_amount) {
       
-      if (type === "2") {
-        return parseFloat(((discount / 100) * main_amount)).toFixed(2);
-      } else {
+      //if (type === "2") {
+      //  return parseFloat(((discount / 100) * main_amount)).toFixed(2);
+      //} else {
         return parseFloat(discount).toFixed(2);
-      }
+      //}
     }
 
   },

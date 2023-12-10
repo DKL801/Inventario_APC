@@ -52,7 +52,7 @@
 							</tr>  				
 
 							<tr style="border: none !important;">
-								<td colspan="8" style="border: none !important;"><p style="text-align: center;font-weight: bold;">Invoice Report from {{ date('j M Y',strtotime($start_date)) }} To {{ date('j M Y',strtotime($end_date)) }}</p></td>
+								<td colspan="8" style="border: none !important;"><p style="text-align: center;font-weight: bold;">Reporte de factura del {{ date('j M Y',strtotime($start_date)) }} al {{ date('j M Y',strtotime($end_date)) }}</p></td>
 
 							</tr>
 							<tr>

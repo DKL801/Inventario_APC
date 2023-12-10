@@ -25,8 +25,8 @@
                            	  </div>
 
                            	  <div class="form-inline" style="margin-top: 10px;">
-                           	  	<p>Importe</p>
-                           	  	<input style="width: 100%;" type="text" class="form-control" name="" placeholder="Importe" v-model="payment.payment_amount">
+                           	  	<p>Pago</p>
+                           	  	<input style="width: 100%;" type="number" class="form-control" name="" placeholder="Pago" v-model="payment.payment_amount">
                            	  </div>
 
                            	  <div class="form-inline" style="margin-top: 10px;">
